@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Employee Management System</title>
+        <title style="font-family: Times New Roman, serif">Employee Management System</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,25 +19,25 @@ and open the template in the editor.
     <body style="background-color: #E3E7E6">
         <div class="container my-2">
 
-            <h1>Employees List</h1> 
+            <h1 style="font-family: Times New Roman, serif">Employees List</h1> 
             <a th:href="@{/showNewEmployeeForm}" class="btn btn-primary btn-sm mb-3"> Add Employee </a>
             
             <table style="border-color: #FCFAFA" border="1" class="table table-hover table-responsive-md">
                 <thead> 
                     <tr>
-                        <th> Employee First Name</th> 
-                        <th> Employee Last Name</th>
-                        <th> Employee Email</th>
-                        <th> Actions </th>
+                        <th style="font-family: Times New Roman, serif"> Employee First Name</th> 
+                        <th style="font-family: Times New Roman, serif"> Employee Last Name</th>
+                        <th style="font-family: Times New Roman, serif"> Employee Email</th>
+                        <th style="font-family: Times New Roman, serif"> Actions </th>
                     </tr> 
                 </thead>
                 <tbody>
                     <tr th:each="employee : ${listEmployees}">
-                        <td th:text="${employee.firstName}"></td>
-                        <td th:text="${employee.lastName}"></td>
-                        <td th:text="${employee.email}"></td>
-                        <td><a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary">Update</a>
-                            <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>
+                        <td th:text="${employee.firstName}" style="font-family: Times New Roman, serif"></td>
+                        <td th:text="${employee.lastName}" style="font-family: Times New Roman, serif"></td>
+                        <td th:text="${employee.email}" style="font-family: Times New Roman, serif"></td>
+                        <td><a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary" style="font-family: Times New Roman, serif">Update</a>
+                            <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger" style="font-family: Times New Roman, serif">Delete</a>
                         </td>
                     </tr>
                 </tbody>
@@ -45,7 +45,7 @@ and open the template in the editor.
             <br>
             
             <ul class="nav navbar-nav">
-                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}" style="font-family: Times New Roman, serif">Logout</a></li>
             </ul>
             
         </div>

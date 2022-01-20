@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Registration</title>
+        <title style="font-family: Times New Roman, serif">Registration</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
@@ -38,32 +38,32 @@ and open the template in the editor.
                         <div class="alert alert-info">You have successfully registered</div>
                     </div>
 
-                    <h1>Registration</h1>
+                    <h1 style="font-family: Times New Roman, serif">Registration</h1>
 
                     <form th:action="@{/registration}" method="post" th:object="${user}">
                         <div class="form-group">
-                            <label class="control-label" for="firstName">
+                            <label class="control-label" for="firstName" style="font-family: Times New Roman, serif">
                                 First Name
                             </label>
                             <input id="firstName" class="form-control" th:field="*{firstName}" required autofocus/>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="lastName">
+                            <label class="control-label" for="lastName" style="font-family: Times New Roman, serif">
                                 Last Name
                             </label>
                             <input id="lastName" class="form-control" th:field="*{lastName}" required/>
                         </div> 
 
                         <div class="form-group">
-                            <label class="control-label" for="email">
+                            <label class="control-label" for="email" style="font-family: Times New Roman, serif">
                                 Email
                             </label>
                             <input id="email" class="form-control" th:field="*{email}" required/>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="password">
+                            <label class="control-label" for="password" style="font-family: Times New Roman, serif">
                                 Password
                             </label>
                             <input id="password" class="form-control" type="password" th:field="*{password}" required/>
@@ -71,7 +71,8 @@ and open the template in the editor.
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-success">Register</button>
-                            <span>Already registered? <a href="/" th:href="@{/login}">Login here</a></span>
+                            <span style="font-family: Times New Roman, serif">Already registered? 
+                                <a href="/" th:href="@{/login}" style="font-family: Times New Roman, serif">Login here</a></span>
                         </div>     
                     </form>
                 </div>
