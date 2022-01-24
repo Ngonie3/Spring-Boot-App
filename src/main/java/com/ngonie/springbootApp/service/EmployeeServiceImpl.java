@@ -30,12 +30,12 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public void saveEmployee(Employee employee) {
-         //To change body of generated methods, choose Tools | Templates.\
+         //To change body of generated methods, choose Tools | Templates.
          this.employeeRepository.save(employee);
     }
 
     @Override
-    public Employee getEployeeById(long id) {
+    public Employee getEmployeeById(long id) {
         //To change body of generated methods, choose Tools | Templates.
         Optional<Employee> optional = employeeRepository.findById(id);
         Employee employee = null;
@@ -53,5 +53,4 @@ public class EmployeeServiceImpl implements EmployeeService{
        //To change body of generated methods, choose Tools | Templates.
        this.employeeRepository.deleteById(id);
     }
-    
 }

@@ -51,7 +51,7 @@ public class EmployeeController {
     public String showFormForUpdate(@PathVariable(value="id") long id, Model model){
         
         //get Employee from the Service
-        Employee employee = employeeService.getEployeeById(id);
+        Employee employee = employeeService.getEmployeeById(id);
         
         //set Employee as a model attribute to pre-populate the form
         model.addAttribute("employee", employee);

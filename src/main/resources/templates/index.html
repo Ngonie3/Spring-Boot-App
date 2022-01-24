@@ -28,6 +28,7 @@ and open the template in the editor.
                         <th style="font-family: Times New Roman, serif"> Employee First Name</th> 
                         <th style="font-family: Times New Roman, serif"> Employee Last Name</th>
                         <th style="font-family: Times New Roman, serif"> Employee Email</th>
+                        <th style="font-family: Times New Roman, serif">Employee Phone Number</th>
                         <th style="font-family: Times New Roman, serif"> Actions </th>
                     </tr> 
                 </thead>
@@ -36,6 +37,7 @@ and open the template in the editor.
                         <td th:text="${employee.firstName}" style="font-family: Times New Roman, serif"></td>
                         <td th:text="${employee.lastName}" style="font-family: Times New Roman, serif"></td>
                         <td th:text="${employee.email}" style="font-family: Times New Roman, serif"></td>
+                        <td th:text="${employee.phoneNumber}" style="font-family: TImes New Roman, serif"></td> 
                         <td><a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary" style="font-family: Times New Roman, serif">Update</a>
                             <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger" style="font-family: Times New Roman, serif">Delete</a>
                         </td>

@@ -32,6 +32,17 @@ public class Employee {
     
     @Column(name = "email")
     private String email;
+    
+    @Column (name ="phone_number")
+    private String phoneNumber;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     public long getId() {
         return id;
@@ -63,7 +74,5 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-    
-    
+    }   
 }
