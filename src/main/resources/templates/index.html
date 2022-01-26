@@ -47,7 +47,8 @@ and open the template in the editor.
             <hr>
             
             <ul class="nav navbar-nav">
-                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}" style="font-family: Times New Roman, serif"> Logout </a></li>
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}" style="font-family: Times New Roman, serif" > Logout </a>
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/contactList}" style="font-family: Times New Roman, serif" > Emergency Contact Details</a></li>
             </ul>
             
         </div>
