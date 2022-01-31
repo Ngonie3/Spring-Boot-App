@@ -15,4 +15,5 @@ import org.springframework.security.core.userdetails.UserDetailsService;
  */
 public interface ContactListService extends UserDetailsService{
     contactList save(contactListDto listDto);
+    void saveEmergencyContact(contactList contacList);
 }

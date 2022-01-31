@@ -20,6 +20,10 @@
         <body style="background-color: #E3E7E6">
             <div class="container">
                 
+                <div th:if="${param.success}">
+                    <div class="alert alert-info">You have successfully registered</div>
+                </div>
+                
                 <h1 style="font-family: Times New Roman, serif">Employee Management System</h1>
                 <hr>
                 <h2 style="font-family: Times New Roman, serif">Emergency Contact</h2>
@@ -35,9 +39,9 @@
 
                     <button type="submit" class="btn btn-info col-2" style="font-family: Times New Roman, serif">Update</button>
                 </form>
-
+                
                 <hr>
-
+                
                 <a th:href="@{/}" style="font-family: Times New Roman, serif">Back to Employees List</a>
 
             </div>

@@ -5,6 +5,7 @@
  */
 package com.ngonie.springbootApp.controller;
 
+import com.ngonie.springbootApp.model.contactList;
 import com.ngonie.springbootApp.service.ContactListService;
 import com.ngonie.springbootApp.web.dto.contactListDto;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 
 
 /**
@@ -20,21 +23,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@RequestMapping("/contactList")
+@RequestMapping(value="contactList", method=RequestMethod.POST)
 public class ContactListController {
     
     private ContactListService contactListService;
-
-    public ContactListController(ContactListService contactListService) {
-        this.contactListService = contactListService;
-    }
-
-    public ContactListController() {
-    }
     
-    @ModelAttribute("contactList")
-    public contactListDto contListDto(){
-        return new contactListDto();
+    public ContactListController() {
     }
     
     @GetMapping
@@ -42,9 +36,14 @@ public class ContactListController {
         return "contactList";
     }
     
-    @PostMapping
-    public String updateContactList (@ModelAttribute("contactList") contactListDto contListDto){
-        contactListService.save(contListDto);
-        return"redirect:/contactList?success";
+    @PostMapping("/saveEmergencyContact")
+    public String updateContactList(@ModelAttribute("contact_list") contactList contacList){
+        contactListService.saveEmergencyContact(contacList);
+        return "new_emergency_contact";
     }
+    
+    @ModelAttribute("contactList")
+    public contactListDto contListDto(){
+        return new contactListDto();
+    }   
 }

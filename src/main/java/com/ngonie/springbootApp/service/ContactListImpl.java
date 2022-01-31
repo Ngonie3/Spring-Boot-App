@@ -36,4 +36,10 @@ public class ContactListImpl implements ContactListService{
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }  
+
+    @Override
+    public void saveEmergencyContact(contactList contacList) {
+     //To change body of generated methods, choose Tools | Templates.
+     this.contactListRepository.save(contacList);
+    }
 }
