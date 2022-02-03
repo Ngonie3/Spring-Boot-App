@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ngonie.springbootApp.website;
+package com.ngonie.springbootApp.controller;
 
 import com.ngonie.springbootApp.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;

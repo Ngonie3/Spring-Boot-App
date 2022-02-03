@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Employee Management System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        span{
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+            font-family: Times New Roman, serif;
+        }
+    </style>
+    </head>
+    <body style="background-color: #E3E7E6">
+        <div class="container">
+            
+            <h1 style="font-family: Times New Roman,serif">Employee Management System</h1>
+            <hr>
+            <h2 style="font-family: Times New Roman, serif">Details successfully Updated</h2>
+            
+            <span>Employee Name: </span><span th:text="${contact.employeeName}"></span></br>
+            
+            <span>Employee Next of Kin: </span><span th:text="${contact.nextOfKin}"></span></br>
+            
+            <span>Next of Kin phone number: </span><span th:text="${contact.phoneNumber}"></span></br>
+            
+            <span>Next of Kin address: </span><span th:text="${contact.address}"></span></br>
+            
+            <a th:href="@{/emergencyContact}" style="font-family: Times New Roman, serif"> Back</a>
+
+        </div>
+    </body>
+</html>

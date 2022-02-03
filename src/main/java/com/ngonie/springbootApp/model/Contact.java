@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="contact_list")
-public class contactList {
+public class Contact {
     
     @Id
     @Column(name="employee_name")
@@ -32,10 +32,10 @@ public class contactList {
     @Column(name="address")
     private String address;
 
-    public contactList() {
+    public Contact() {
     }
 
-    public contactList(String employeeName, String nextOfKin, String phoneNumber, String address) {
+    public Contact(String employeeName, String nextOfKin, String phoneNumber, String address) {
         this.employeeName = employeeName;
         this.nextOfKin = nextOfKin;
         this.phoneNumber = phoneNumber;

@@ -6,7 +6,7 @@
 package com.ngonie.springbootApp.repository;
 
 import org.springframework.stereotype.Repository;
-import com.ngonie.springbootApp.model.contactList;
+import com.ngonie.springbootApp.model.Contact;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -14,6 +14,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author ngoni
  */
 @Repository
-public interface ContactListRepository extends JpaRepository<contactList, Character>{
+public interface ContactListRepository extends JpaRepository<Contact, Character>{
     
 }
