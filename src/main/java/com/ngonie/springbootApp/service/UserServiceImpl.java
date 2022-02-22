@@ -40,14 +40,12 @@ public class UserServiceImpl implements UserService{
     
     @Override
     public user save(UserRegistrationDto registrationDto) {
-         //To change body of generated methods, choose Tools | Templates.
          user user1 = new user(registrationDto.getFirstName(), registrationDto.getLastName(), registrationDto.getEmail(), passwordEncoder.encode(registrationDto.getPassword()), Arrays.asList(new Role("ROLE_USER")));
          return userRepository.save(user1);
     }  
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        //To change body of generated methods, choose Tools | Templates.
         user user = userRepository.findByEmail(username);
         if(user == null){
             throw new UsernameNotFoundException("Invalid username or password");

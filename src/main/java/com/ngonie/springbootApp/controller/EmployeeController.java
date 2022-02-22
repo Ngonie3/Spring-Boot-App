@@ -26,12 +26,6 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
     
-    /*@GetMapping("/")
-    public String viewHomePage(Model model){
-        model.addAttribute("listEmployees", employeeService.getAllEmployees());
-        return "index";
-    }*/
-    
     @GetMapping("/showNewEmployeeForm")
     public String showNewEmployeeForm(Model model){
         //create model attribute to bind form data

@@ -13,8 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 
 /**
@@ -40,10 +39,4 @@ public class EmergencyContact {
         return "details_submitted";
     }
     
-    /*@RequestMapping("/emergencyContact")
-    @ResponseBody
-    public String saveData(Contact contact){
-        repo.save(contact);
-        return"details_submitted";
-    }*/
 }

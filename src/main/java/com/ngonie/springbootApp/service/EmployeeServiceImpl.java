@@ -24,19 +24,16 @@ public class EmployeeServiceImpl implements EmployeeService{
     
     @Override
     public List<Employee> getAllEmployees() {
-        //To change body of generated methods, choose Tools | Templates.
         return employeeRepository.findAll();
     }
 
     @Override
     public void saveEmployee(Employee employee) {
-         //To change body of generated methods, choose Tools | Templates.
          this.employeeRepository.save(employee);
     }
 
     @Override
     public Employee getEmployeeById(long id) {
-        //To change body of generated methods, choose Tools | Templates.
         Optional<Employee> optional = employeeRepository.findById(id);
         Employee employee = null;
         if(optional.isPresent()){
@@ -50,7 +47,6 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public void deleteEmployeeById(long id) {
-       //To change body of generated methods, choose Tools | Templates.
        this.employeeRepository.deleteById(id);
     }
 }
